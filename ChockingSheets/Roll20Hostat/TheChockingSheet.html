@@ -3,21 +3,21 @@
 
     div.sheet-chockingsheets table {
         /* for debug of layout only border set to 1px. in production comment out*/
-        /* border: 0px solid black; */
+        /* border: 1px solid black; */
         padding: 0px;
         border-spacing: 5px;
         vertical-align: top;
     }
     div.sheet-chockingsheets td {
         /* for debug of layout only border set to 1px. in production comment out*/
-        /* border: 0px solid black; */
+        /* border: 1px solid black; */
         padding: 0px;
         padding: 0px;
         vertical-align: top;
     }
     /* for debug of layout only border set to 1px. in production comment out*/
     div.sheet-chockingsheets tr {
-        /* border: 0px solid black; */
+        /* border: 1px solid black; */
         padding: 0px;
         padding: 0px;
         vertical-align: top;
@@ -52,6 +52,13 @@
         border-left-color: gray;
         border-left-width: 1px;
         border-left-style: solid;
+    }
+    .sheet-chockingsheets-box-input-calculated {
+        border: 3px solid black;
+        border-radius: 4px;
+        height: 40px;
+        width: 100px;
+        background-color:pink;
     }
 </style>
 <div class="sheet-chockingsheets">
@@ -197,7 +204,7 @@
         <tr>
             <td colspan="2">
                 Grundegenskaper
-                </td>
+            </td>
             <td>
                 Färdigheter
             </td>
@@ -307,7 +314,7 @@
                         <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_spana"></td>
                         <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
                     </tr>
-                    
+
                     <tr>
                         <td><span class="sheet-cockingsheets-fardighet-label">Söka</span></td>
                         <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_söka"></td>
@@ -478,332 +485,105 @@
         </tr>
         <tr>
             <td style="width:100%;" colspan="2">
-            <input type="text" class="sheet-chockingsheets-box-input" name="attr_sprak" style="width:45%;"/>
-            <input type="text" class="sheet-chockingsheets-box-input" name="attr_fordon" style="width:45%;" />
+                <input type="text" class="sheet-chockingsheets-box-input" name="attr_sprak" style="width:45%;" />
+                <input type="text" class="sheet-chockingsheets-box-input" name="attr_fordon" style="width:45%;" />
             </td>
-         </tr>
+        </tr>
     </table>
+    <table>
+        <tr>
+            <td style="width: 33%;">
+                <table>
+                    <tr>
+                        <td>Initiativ</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_initiativ" />
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Försvar</td>
+                                    <td></td>
+                                    <td>Skydd</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_forsvar" /></td>
+                                    <td></td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_skydd" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Tålighet</td>
+                                    <td>&nbsp;</td>
+                                    <td>Max</td>
+                                    <td>Aktuell</td>
 
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_talighet_max" /></td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_stalighet_aktuell" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table>
+                                <tr>
+                                    <td>Trauma</td>
+                                    <td>
+                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma1">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma2">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma3_medvetslos">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma4_doende">
+                                    </td>
+                                    <td>
+                                        <img src='http://midgardskultur.se/roll20chockingsheets/trauma_dead.png' />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Medvetslös</td>
+                                    <td>Döende</td>
+                                </tr>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 33%;">
+            </td>
+            <td style="width: 33%;">
+            </td>
+        </tr>
+    </table>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <table>
-        <tr style="height: 20px">
-            <th id="0R15" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Fysik</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Egenhet</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Datorer &amp; internet</td>
-            <td class="s11"></td>
-            <td class="s15"></td>
-            <td class="s8" dfinternetir="ltr" colspan="4">Biologi</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R16" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Rörlighet</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Atletisk förmåga</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Djurkunskap</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Historia</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R17" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Iakttagelse</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Fokus</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Hantverk</td>
-            <td class="s11"></td>
-            <td class="s15"></td>
-            <td class="s8" dir="ltr" colspan="4">Kemi &amp; Biomedicin</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R18" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Bildning</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Fordon</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Kommunikation</td>
-            <td class="s11"></td>
-            <td class="s15"></td>
-            <td class="s8" dir="ltr" colspan="4">Kriminologi</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R19" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Händighet</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Närstrid</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Konstruktion</td>
-            <td class="s11"></td>
-            <td class="s15"></td>
-            <td class="s8" dir="ltr" colspan="4">Matematik</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R20" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Kreativitet</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Skjutvapen</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Kreativt skapande</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Medicin</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R21" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Karisma</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Smyga</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Näringsliv</td>
-            <td class="s11"></td>
-            <td class="s15"></td>
-            <td class="s8" dir="ltr" colspan="4">Ockultism</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R22" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Viljestyrka</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Spana</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Scenkonst</td>
-            <td class="s11"></td>
-            <td class="s15"></td>
-            <td class="s8" dir="ltr" colspan="4">Psykologi</td>
-            <td class="s11"></td>
-            <td class="s13"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R23" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s12" dir="ltr" colspan="3">Intuition</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Söka</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Sjukvård</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s16" dir="ltr" colspan="4">Religion &amp; Antropologi</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R24" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s17" dir="ltr" colspan="2">Sid 27-28</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Tunga vapen</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Taktisk förmåga</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Samhällskunskap</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr style="height: 20px">
-            <th id="0R25" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="s14"></td>
-            <td class="s8" dir="ltr" colspan="4">Vildmark</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Teknik</td>
-            <td class="s11"></td>
-            <td class="s15">
-            </td>
-            <td class="s8" dir="ltr" colspan="4">Språkkunskap</td>
-            <td class="s11"></td>
-            <td class="s13">
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
 
-        <tr style="height: 20px">
-            <th id="0R26" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="s17" dir="ltr" colspan="2">Sid 47-58</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-
-        <tr style="height: 20px">
-            <th id="0R27" style="height: 20px;" class="row-headers-background"></th>
-            <td></td>
-            <td class="s2" dir="ltr" colspan="2">Språk</td>
-
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s2" dir="ltr" colspan="2">
-                Fordon
-            </td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td class="s5"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
         <tr style="height: 20px">
             <th id="0R28" style="height: 20px;" class="row-headers-background"></th>
             <td class="s3"></td>
