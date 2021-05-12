@@ -1,5 +1,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
+
+    div.sheet-chockingsheets table {
+        /* for debug of layout only border set to 1px. in production comment out*/
+        /* border: 0px solid black; */
+        padding: 0px;
+        border-spacing: 5px;
+        vertical-align: top;
+    }
+    div.sheet-chockingsheets td {
+        /* for debug of layout only border set to 1px. in production comment out*/
+        /* border: 0px solid black; */
+        padding: 0px;
+        padding: 0px;
+        vertical-align: top;
+    }
+    /* for debug of layout only border set to 1px. in production comment out*/
+    div.sheet-chockingsheets tr {
+        /* border: 0px solid black; */
+        padding: 0px;
+        padding: 0px;
+        vertical-align: top;
+    }
+
+
     .sheet-chockingsheets-box-border {
         border: 3px solid black;
     }
@@ -7,24 +31,6 @@
         border: 3px solid black;
         border-radius: 4px;
         height: 40px;
-    }
-    div.sheet-chockingsheets table {
-        border: 1px solid black;
-        padding: 0px;
-        border-spacing: 5px;
-        vertical-align: top;
-    }
-    div.sheet-chockingsheets td {
-        border: 1px solid black;
-        padding: 0px;
-        padding: 0px;
-        vertical-align: top;
-    }
-    div.sheet-chockingsheets tr {
-        border: 1px solid black;
-        padding: 0px;
-        padding: 0px;
-        vertical-align: top;
     }
     input[type=text].sheet-chockingsheets-procon {
         width: 90px;
@@ -41,6 +47,11 @@
     }
     .sheet-chockingsheets-comment {
         font-style:italic;
+    }
+    .sheet-cockingseets-fardighet-column {
+        border-left-color: gray;
+        border-left-width: 1px;
+        border-left-style: solid;
     }
 </style>
 <div class="sheet-chockingsheets">
@@ -184,13 +195,16 @@
 
     <table>
         <tr>
+            <td colspan="2">
+                Grundegenskaper
+                </td>
+            <td>
+                Färdigheter
+            </td>
+        </tr>
+        <tr>
             <td>
                 <table>
-                    <tr>
-                        <td columnspan="3">
-                            Grundegenskaper
-                        </td>
-                    </tr>
                     <tr>
                         <td><span class="sheet-cockingsheets-grundegenskap-label">Fysik</span></td>
                         <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_fysik"></td>
@@ -237,19 +251,15 @@
                         <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
                     </tr>
                     <tr>
-                        <td columnspan="3" >
+                        <td columnspan="3">
                             <span class="sheet-chockingsheets-comment">Sid 27-28</span>
                         </td>
                     </tr>
                 </table>
             </td>
+            <td></td>
             <td>
-                <table>
-                    <tr>
-                        <td columnspan="3">
-                            Färdigheter
-                        </td>
-                    </tr>
+                <table class="sheet-cockingseets-fardighet-column">
                     <tr>
                         <td><span class="sheet-cockingsheets-fardighet-label">Egenhet</span></td>
                         <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_egenhet"></td>
@@ -293,7 +303,7 @@
                     </tr>
 
                     <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">¨Söka</span></td>
+                        <td><span class="sheet-cockingsheets-fardighet-label">Söka</span></td>
                         <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_söka"></td>
                         <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
                     </tr>
@@ -309,21 +319,29 @@
                         <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_vildmark"></td>
                         <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
                     </tr>
-                    <tr>
-                        <td columnspan="3">
-                            <span class="sheet-chockingsheets-comment">Sid 47-58</span>
-                        </td>
-                    </tr>
                 </table>
 
             </td>
             <td>
                 <table>
                 </table>
-
+            </td>
+            <td>
+                <table>
+                </table>
             </td>
         </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td columnspan="3">
+                <span class="sheet-chockingsheets-comment">Sid 47-58</span>
+            </td>
+
+        </tr>
     </table>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <table>
         <tr style="height: 20px">
             <th id="0R15" style="height: 20px;" class="row-headers-background"></th>
