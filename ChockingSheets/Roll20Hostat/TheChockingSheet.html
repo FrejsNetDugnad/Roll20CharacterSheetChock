@@ -4,20 +4,21 @@
     div.sheet-chockingsheets table {
         /* for debug of layout only border set to 1px. in production comment out*/
         /* border: 1px solid black; */
+        border: 1px solid black;
         padding: 0px;
         border-spacing: 5px;
         vertical-align: top;
     }
     div.sheet-chockingsheets td {
         /* for debug of layout only border set to 1px. in production comment out*/
-        /* border: 1px solid black; */
+        border: 1px solid black;
         padding: 0px;
         padding: 0px;
         vertical-align: top;
     }
     /* for debug of layout only border set to 1px. in production comment out*/
     div.sheet-chockingsheets tr {
-        /* border: 1px solid black; */
+        border: 1px solid black; 
         padding: 0px;
         padding: 0px;
         vertical-align: top;
@@ -60,6 +61,34 @@
         width: 100px;
         background-color:pink;
     }
+    .sheet-chockingsheets-box-input-calculated-square {
+        border: 3px solid black;
+        border-radius: 4px;
+        height: 60px;
+        width: 80px;
+        background-color: pink;
+    }
+    .sheet-chockingsheets-box-input-calculated-square-white {
+        border: 3px solid black;
+        border-radius: 4px;
+        height: 60px;
+        width: 80px;
+        background-color: white;
+    }
+
+    .sheet-chockingsheets-box-input-calculated-square-label {
+        align-content : center;
+        vertical-align: central;
+    }  
+    td.sheet-chockingsheets-chock {
+        background-color: black;
+        height: 100%;
+        color: white;
+    }
+    span.sheet-chockingsheets-chock {
+        color: white;
+    }
+
 </style>
 <div class="sheet-chockingsheets">
     <table>
@@ -67,519 +96,614 @@
             <td>
                 <table>
                     <tr>
-                        <td></td>
-                        <td colspan="1">Drivkraft</td>
-                        <td colspan="1">Namn</td>
-                    </tr>
-
-                    <tr>
-                        <td></td>
-                        <td colspan="1">
-                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_drivkraft" />
-                        </td>
-                        <td colspan="1">
-                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_name" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1"></td>
-                        <td colspan="1">Personlighetsdrag</td>
                         <td>
                             <table>
                                 <tr>
-                                    <td colspan="1">Ålder</td>
-                                    <td colspan="1">Hemort</td>
+                                    <td></td>
+                                    <td colspan="1">Drivkraft</td>
+                                    <td colspan="1">Namn</td>
                                 </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1&nbsp;</td>
-                        <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_personlighetsdrag1" /></td>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td colspan="2"><input type="text" class="sheet-chockingsheets-box-input" name="attr_alder" /></td>
-                                    <td colspan="2"><input type="text" class="sheet-chockingsheets-box-input" name="attr_hemort" /></td>
-                                </tr>
-                            </table>
-                        </td>
-                    <tr></tr>
-                    <tr>
-                        <td>2&nbsp;</td>
-                        <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_personlighetsdrag2" /></td>
-                        <td colspan="1">Livsstil</td>
-                    </tr>
-                    <tr>
-                    </tr>
 
-                    <tr>
-                        <td>3&nbsp;</td>
-                        <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_personlighetsdrag3" /></td>
-                        <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_livsstil" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Egenheter</td>
-                        <td>Sysselsättnign</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_egenheter" /></td>
-                        <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_sysselsattning" /></td>
-                    </tr>
-                </table>
-            </td>
-            <td>
-                <table>
-                    <tr>
-                        <td>Fördel</td>
-                        <td></td>
-                        <td>Nackdel</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" class="sheet-chockingsheets-box-input sheet-chockingsheets-procon" name="attr_fordel" />
-                        </td>
-                        <td></td>
-                        <td>
-                            <input type="text" class="sheet-chockingsheets-box-input sheet-chockingsheets-procon" name="attr_nackdel" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">
-                            <table>
                                 <tr>
-                                    <td class="sheet-chockingsheets-box-border">
+                                    <td></td>
+                                    <td colspan="1">
+                                        <input type="text" class="sheet-chockingsheets-box-input" name="attr_drivkraft" />
+                                    </td>
+                                    <td colspan="1">
+                                        <input type="text" class="sheet-chockingsheets-box-input" name="attr_name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1"></td>
+                                    <td colspan="1">Personlighetsdrag</td>
+                                    <td>
                                         <table>
-                                            <tr><td colspan="7">Insikt</td></tr>
                                             <tr>
-                                                <td>
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt1">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt2">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt3">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt4">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt5">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt6">
+                                                <td colspan="1">Ålder</td>
+                                                <td colspan="1">Hemort</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1&nbsp;</td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_personlighetsdrag1" /></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td colspan="2"><input type="text" class="sheet-chockingsheets-box-input" name="attr_alder" /></td>
+                                                <td colspan="2"><input type="text" class="sheet-chockingsheets-box-input" name="attr_hemort" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                <tr></tr>
+                                <tr>
+                                    <td>2&nbsp;</td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_personlighetsdrag2" /></td>
+                                    <td colspan="1">Livsstil</td>
+                                </tr>
+                                <tr>
+                                </tr>
+
+                                <tr>
+                                    <td>3&nbsp;</td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_personlighetsdrag3" /></td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_livsstil" /></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Egenheter</td>
+                                    <td>Sysselsättnign</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_egenheter" /></td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input" name="attr_sysselsattning" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>Fördel</td>
+                                    <td></td>
+                                    <td>Nackdel</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="sheet-chockingsheets-box-input sheet-chockingsheets-procon" name="attr_fordel" />
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <input type="text" class="sheet-chockingsheets-box-input sheet-chockingsheets-procon" name="attr_nackdel" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <table>
+                                            <tr>
+                                                <td class="sheet-chockingsheets-box-border">
+                                                    <table>
+                                                        <tr><td colspan="7">Insikt</td></tr>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt1">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt2">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt3">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt4">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt5">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_insikt6">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sheet-chockingsheets-box-border class="sheet-chockingsheets-procon-tur-content">
+                                                    <table>
+                                                        <tr>
+                                                        <tr><td>Tur</td></tr>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_tur1">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_tur2">
+                                                                &nbsp;
+                                                                <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_tur3">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="sheet-chockingsheets-box-border class="sheet-chockingsheets-procon-tur-content">
-                                        <table>
-                                            <tr>
-                                            <tr><td>Tur</td></tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_tur1">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_tur2">
-                                                    &nbsp;
-                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_tur3">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
+                                    <td colspan="3"> <img src='http://midgardskultur.se/roll20chockingsheets/ChockAterFranGravenLogga.png' height='100'></td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
-                    <tr>
-                        <td colspan="3"> <img src='http://midgardskultur.se/roll20chockingsheets/ChockAterFranGravenLogga.png' height='100'></td>
-                    </tr>
                 </table>
-            </td>
-        </tr>
-
-    </table>
-
-    <table>
-        <tr>
-            <td colspan="2">
-                Grundegenskaper
-            </td>
-            <td>
-                Färdigheter
             </td>
         </tr>
         <tr>
             <td>
                 <table>
                     <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Fysik</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_fysik"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                        <td colspan="2">
+                            Grundegenskaper
+                        </td>
+                        <td>
+                            Färdigheter
+                        </td>
                     </tr>
                     <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Rörlighet</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_rorlighet"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_one_of_four.png'></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Fysik</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_fysik"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Rörlighet</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_rorlighet"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_one_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Iaktagelse</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_iaktagelse"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_two_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Bildning</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_bildning"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_three_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Händighet</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_handinghet"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_four_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Kreativitet</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_kreativitet"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Karisma</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_karisma"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Viljestyrka</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_viljestyrka"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-grundegenskap-label">Intuition</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_intuition"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td columnspan="3">
+                                        <span class="sheet-chockingsheets-comment">Sid 27-28</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td></td>
+                        <td>
+                            <table class="sheet-cockingseets-fardighet-column">
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Egenhet</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_egenhet"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Atletisk förmåga</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_atletisk"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Fokus</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_fokus"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Fordon</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_fordon"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Närstrid</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_narstridt"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Skjutvapen</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_skjutvapen"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Smyga</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_smyga"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Spana</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_spana"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Söka</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_söka"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Tunga vapen</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_tungavapen"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Vildmark</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_vildmark"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                        <td>
+                            <table class="sheet-cockingseets-fardighet-column">
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Datorer & Internet</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_datorer"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Djurkunskaper</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_djurkunskaper"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Hantverk</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_hantverk"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Kommunikation</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kommunikation"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Konstruktion</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_konstruktion"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Kreativt skapande</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kreativtskapande"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Näringsliv</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_naringsliv"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Scenkonst</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_scenkonst"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Sjukvård</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_sjukvard"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Taktisk förmåga</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_taktiskformoga"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Teknik</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_teknik"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="sheet-cockingseets-fardighet-column">
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Biologi</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_biologi"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Historia</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_historia"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Kemi & Biomedicin</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kemiobiomedicin"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Kriminologi</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kriminologi"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Matematik</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_matematik"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Medicin</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_medicin"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Ockultism</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_ockultism"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Psykologi</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_psykologi"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Religion & Antropologi</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_religionoantropologi"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Samhällskunskap</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_samhalsskunskapk"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="sheet-cockingsheets-fardighet-label">Språkkunskap</span></td>
+                                    <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_sprakkunskap"></td>
+                                    <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
                     <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Iaktagelse</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_iaktagelse"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_two_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Bildning</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_bildning"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_three_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Händighet</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_handinghet"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_four_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Kreativitet</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_kreativitet"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Karisma</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_karisma"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Viljestyrka</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_viljestyrka"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-grundegenskap-label">Intuition</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_grundegenskap_intuition"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
+                        <td></td>
+                        <td></td>
                         <td columnspan="3">
-                            <span class="sheet-chockingsheets-comment">Sid 27-28</span>
+                            <span class="sheet-chockingsheets-comment">Sid 47-58</span>
                         </td>
+
                     </tr>
                 </table>
             </td>
-            <td></td>
+        </tr>
+        <tr>
+        <td>
+            <table style="width:100%;">
+                <tr>
+                    <td>Språk</td>
+                    <td>Fordon</td>
+                </tr>
+                <tr>
+                    <td style="width:100%;" colspan="2">
+                        <input type="text" class="sheet-chockingsheets-box-input" name="attr_sprak" style="width:45%;" />
+                        <input type="text" class="sheet-chockingsheets-box-input" name="attr_fordon" style="width:45%;" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+        <tr>
             <td>
-                <table class="sheet-cockingseets-fardighet-column">
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Egenhet</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_egenhet"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Atletisk förmåga</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_atletisk"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Fokus</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_fokus"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Fordon</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_fordon"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Närstrid</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_narstridt"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Skjutvapen</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_skjutvapen"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Smyga</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_smyga"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Spana</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_spana"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Söka</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_söka"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Tunga vapen</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_tungavapen"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Vildmark</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_vildmark"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                </table>
-
-            </td>
-            <td>
-                <table class="sheet-cockingseets-fardighet-column">
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Datorer & Internet</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_datorer"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Djurkunskaper</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_djurkunskaper"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Hantverk</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_hantverk"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Kommunikation</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kommunikation"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Konstruktion</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_konstruktion"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Kreativt skapande</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kreativtskapande"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Näringsliv</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_naringsliv"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Scenkonst</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_scenkonst"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Sjukvård</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_sjukvard"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Taktisk förmåga</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_taktiskformoga"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Teknik</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_teknik"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                </table>
-            </td>
-            <td>
-                <table class="sheet-cockingseets-fardighet-column">
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Biologi</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_biologi"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Historia</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_historia"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Kemi & Biomedicin</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kemiobiomedicin"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Kriminologi</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_kriminologi"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Matematik</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_matematik"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Medicin</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_medicin"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Ockultism</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_ockultism"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Psykologi</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_psykologi"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Religion & Antropologi</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_religionoantropologi"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Samhällskunskap</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_samhalsskunskapk"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                    <tr>
-                        <td><span class="sheet-cockingsheets-fardighet-label">Språkkunskap</span></td>
-                        <td> <input type="text" class="sheet-cockingsheets-input-number" name="attr_fardighet_sprakkunskap"></td>
-                        <td><img src='http://midgardskultur.se/roll20chockingsheets/circlel_marker_zero_of_four.png'></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td columnspan="3">
-                <span class="sheet-chockingsheets-comment">Sid 47-58</span>
-            </td>
-
-        </tr>
-    </table>
-    <table style="width:100%;">
-        <tr>
-            <td>Språk</td>
-            <td>Fordon</td>
-        </tr>
-        <tr>
-            <td style="width:100%;" colspan="2">
-                <input type="text" class="sheet-chockingsheets-box-input" name="attr_sprak" style="width:45%;" />
-                <input type="text" class="sheet-chockingsheets-box-input" name="attr_fordon" style="width:45%;" />
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td style="width: 33%;">
                 <table>
                     <tr>
-                        <td>Initiativ</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_initiativ" />
-                        </td>
-                    </tr>
-                    <tr>
-                    </tr>
-                    <tr>
-                        <td>
+                        <td style="width: 33%;">
                             <table>
                                 <tr>
-                                    <td>Försvar</td>
-                                    <td></td>
-                                    <td>Skydd</td>
+                                    <td>Initiativ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_forsvar" /></td>
-                                    <td></td>
-                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_skydd" /></td>
+                                    <td>
+                                        <input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_initiativ" />
+                                    </td>
                                 </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table>
+                                <tr> </tr>
                                 <tr>
-                                    <td>Tålighet</td>
-                                    <td>&nbsp;</td>
-                                    <td>Max</td>
-                                    <td>Aktuell</td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Försvar</td>
+                                                <td></td>
+                                                <td>Skydd</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_forsvar" /></td>
+                                                <td></td>
+                                                <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_skydd" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Tålighet</td>
+                                                <td>&nbsp;</td>
+                                                <td>Max</td>
+                                                <td>Aktuell</td>
+
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_talighet_max" /></td>
+                                                <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_stalighet_aktuell" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <table>
+                                            <tr>
+                                                <td>Trauma</td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma2">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma3_medvetslos">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma4_doende">
+                                                </td>
+                                                <td>
+                                                    <img src='http://midgardskultur.se/roll20chockingsheets/trauma_dead.png' />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Medvetslös</td>
+                                                <td>Döende</td>
+                                            </tr>
+                                        </table>
+                                    </td>
 
                                 </tr>
-                                <tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_talighet_max" /></td>
-                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated" name="attr_stalighet_aktuell" /></td>
-                                </tr>
                             </table>
                         </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
+                        <td class="sheet-chockingsheets-chock" style="width: 33%;">
                             <table>
+                                <tr><td></td></tr>
                                 <tr>
-                                    <td>Trauma</td>
                                     <td>
-                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma1">
+                                        <span class="sheet-chockingsheets-chock">Skräcktest (VIL+Fokus)</span>
                                     </td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated-square" name="attr_chock_chocktest" /></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr><td></td></tr>
+                                <tr>
                                     <td>
-                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma2">
+                                        <span class="sheet-chockingsheets-chock">Motstånd</span>
                                     </td>
+                                    <td><input type="text" class="sheet-chockingsheets-box-input-calculated-square" name="attr_chock_motstand" /></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+
+                                <tr>
                                     <td>
-                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma3_medvetslos">
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" class="sheet-cockingsheets-checkbox" name="attr_trauma4_doende">
-                                    </td>
-                                    <td>
-                                        <img src='http://midgardskultur.se/roll20chockingsheets/trauma_dead.png' />
+                                        <table>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class="sheet-chockingsheets-box-input-calculated-square-label">
+                                                    &nbsp;&nbsp; &nbsp;<span class="sheet-chockingsheets-chock sheet-chockingsheets-box-input-calculated-square-label">Max</span>
+                                                </td>
+                                                <td class="sheet-chockingsheets-box-input-calculated-square-label">
+                                                    &nbsp;&nbsp;&nbsp;<span class="sheet-chockingsheets-chock sheet-chockingsheets-box-input-calculated-square-label">Aktuell</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="sheet-chockingsheets-chock">Stabilitet</span>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>
+                                                    <input type="text" class="sheet-chockingsheets-box-input-calculated-square" name="attr_chock_stabilitet_max" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="sheet-chockingsheets-box-input-calculated-square-white" name="attr_chock_stabilitet_aktuell" />
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Medvetslös</td>
-                                    <td>Döende</td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <span class="sheet-chockingsheets-chock">Chock</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox-black" name="attr_trauma1">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox-black" name="attr_trauma2">
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox-black" name="attr_trauma3_tramua">
+                                                    <span class="sheet-chockingsheets-chock">Trauma</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="sheet-cockingsheets-checkbox-black" name="attr_trauma4_koma">
+                                                    <span class="sheet-chockingsheets-chock">Koma</span>
+                                                    </td>
+                                                <td>
+                                                  <img src='http://midgardskultur.se/roll20chockingsheets/chock_dead.png' />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
                                 </tr>
                             </table>
                         </td>
-                        
+                        <td style="width: 33%;">
+                        </td>
                     </tr>
                 </table>
             </td>
-            <td style="width: 33%;">
-            </td>
-            <td style="width: 33%;">
-            </td>
         </tr>
     </table>
-
+</div>
+<div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <table>
