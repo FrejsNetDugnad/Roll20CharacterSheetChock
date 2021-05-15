@@ -4,21 +4,18 @@
     div.sheet-chockingsheets table {
         /* for debug of layout only border set to 1px. in production comment out*/
         /* border: 1px solid black; */
-        border: 1px solid black;
         padding: 0px;
         border-spacing: 5px;
         vertical-align: top;
     }
     div.sheet-chockingsheets td {
         /* for debug of layout only border set to 1px. in production comment out*/
-        border: 1px solid black;
         padding: 0px;
         padding: 0px;
         vertical-align: top;
     }
     /* for debug of layout only border set to 1px. in production comment out*/
     div.sheet-chockingsheets tr {
-        border: 1px solid black; 
         padding: 0px;
         padding: 0px;
         vertical-align: top;
@@ -68,6 +65,15 @@
         width: 80px;
         background-color: pink;
     }
+
+    .sheet-chockingsheets-box-input-experience-square-calculated {
+        border: 3px solid black;
+        border-radius: 4px;
+        height: 40px;
+        width: 60px;
+        background-color: pink;
+    }
+
     .sheet-chockingsheets-box-input-calculated-square-white {
         border: 3px solid black;
         border-radius: 4px;
@@ -88,7 +94,31 @@
     span.sheet-chockingsheets-chock {
         color: white;
     }
+    td.sheet-cockingseets-erfarenhet-box {
+        text-align: right;
+    }
+    .sheet-chockingsheets-box-input-experience-square-white {
+        border: 3px solid black;
+        border-radius: 4px;
+        height: 40px;
+        width: 60px;
+        background-color: white;
+    }
+    
+    .sheet-chockingsheets-relation {
+    }
+    
+    .sheet-chockingsheets-box-input-relation-name {
+    }
+    .sheet-chockingsheets-box-input-relation-name {
+    }
+    .sheet-chockingsheets-box-input-relation-relation {
+    }
+    td.sheet-chockingsheets-box-input-relation {
+        width: 100%;
+    }
 
+    
 </style>
 <div class="sheet-chockingsheets">
     <table>
@@ -515,20 +545,20 @@
             </td>
         </tr>
         <tr>
-        <td>
-            <table style="width:100%;">
-                <tr>
-                    <td>Språk</td>
-                    <td>Fordon</td>
-                </tr>
-                <tr>
-                    <td style="width:100%;" colspan="2">
-                        <input type="text" class="sheet-chockingsheets-box-input" name="attr_sprak" style="width:45%;" />
-                        <input type="text" class="sheet-chockingsheets-box-input" name="attr_fordon" style="width:45%;" />
-                    </td>
-                </tr>
-            </table>
-        </td>
+            <td>
+                <table style="width:100%;">
+                    <tr>
+                        <td>Språk</td>
+                        <td>Fordon</td>
+                    </tr>
+                    <tr>
+                        <td style="width:100%;" colspan="2">
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_sprak" style="width:45%;" />
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_fordon" style="width:45%;" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
         </tr>
         <tr>
             <td>
@@ -685,9 +715,9 @@
                                                 <td>
                                                     <input type="checkbox" class="sheet-cockingsheets-checkbox-black" name="attr_trauma4_koma">
                                                     <span class="sheet-chockingsheets-chock">Koma</span>
-                                                    </td>
+                                                </td>
                                                 <td>
-                                                  <img src='http://midgardskultur.se/roll20chockingsheets/chock_dead.png' />
+                                                    <img src='http://midgardskultur.se/roll20chockingsheets/chock_dead.png' />
                                                 </td>
                                             </tr>
                                         </table>
@@ -696,6 +726,105 @@
                             </table>
                         </td>
                         <td style="width: 33%;">
+                            <table>
+                                <tr>
+                                    <td>Sparad erfarnehet</td>
+                                </tr>
+                                <tr>
+                                    <td class="sheet-cockingseets-erfarenhet-box">
+                                        <input type="text" class="sheet-chockingsheets-box-input-experience-square-white" name="attr_sparad__erfarenhet" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Känslighet</td>
+                                </tr>
+                                <tr>
+                                    <td class="sheet-cockingseets-erfarenhet-box">
+                                        <input type="text" class="sheet-chockingsheets-box-input-experience-square-white" name="attr_sparad__erfarenhet" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kraft</td>
+                                    <td>Max</td>
+                                    <td>Aktuell</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="sheet-cockingseets-erfarenhet-box">
+                                        <input type="text" class="sheet-chockingsheets-box-input-experience-square-calculated" name="attr_sparad__erfarenhet" />
+                                    </td>
+                                    <td class="sheet-cockingseets-erfarenhet-box">
+                                        <input type="text" class="sheet-chockingsheets-box-input-experience-square-white" name="attr_sparad__kanslighet" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Domänkrafter</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">  <input type="text" class="sheet-chockingsheets-box-input" name="attr_domankraft1" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"> <input type="text" class="sheet-chockingsheets-box-input" name="attr_domankraft2" /></td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>Vapen</td>
+                        <td>Attack</td>
+                        <td>Skada</td>
+                        <td>Rv</td>
+                        <td>Trauma</td>
+                        <td>Övrigt</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_vapen" />
+                        </td>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_attack" />
+
+                        </td>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_skada" />
+                        </td>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_rv" />
+                        </td>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_trauma" />
+                        </td>
+                        <td>
+                            <input type="text" class="sheet-chockingsheets-box-input" name="attr_ovrigt" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr class="sheet-chockingsheets-relation">
+                        <td class ="sheet-chockingsheets-box-input-relation">Namn</td>
+                        <td class ="sheet-chockingsheets-box-input-relation">Yrke</td>
+                        <td class ="sheet-chockingsheets-box-input-relation">Relation</td>
+                    </tr>
+                    <tr class="sheet-chockingsheets-relation">
+                        <td class="sheet-chockingsheets-box-input-relation">
+                            <input type="text" class="sheet-chockingsheets-box-input-relation-namn" name="attr_namn" />
+                        </td>
+                        <td class = "sheet-chockingsheets-box-input-relation">
+                            <input type="text" class="sheet-chockingsheets-box-input-relation-yrke" name="attr_yrke" />
+                        </td>
+                        <td class ="sheet-chockingsheets-box-input-relation">
+                            <input type="text" class="sheet-chockingsheets-box-input-relation-relation" name="attr_relation" />
                         </td>
                     </tr>
                 </table>
